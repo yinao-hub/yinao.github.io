@@ -18,7 +18,7 @@
       <nav id="mainNav" class="nav">
         <a href="#about">关于我</a>
         <a href="#projects">项目</a>
-        <a href="#skills">技能</a>
+        <a href="#papers">论文</a>
         <a href="#timeline">经历</a>
         <a href="#contact">联系</a>
         <button id="themeToggle" class="theme-toggle" aria-label="切换主题">🌙</button>
@@ -32,10 +32,6 @@
         <div>
           <p class="eyebrow">Hello, I am</p>
           <h1>Yinao</h1>
-          <p class="hero-text">
-            我是一个热爱构建产品的开发者，专注于 Web、AI 应用和自动化工具。
-            这个页面用于展示我的项目、能力和联系方式。
-          </p>
           <div class="hero-actions">
             <a class="btn primary" href="#projects">查看项目</a>
             <a class="btn ghost" href="#contact">联系我</a>
@@ -46,7 +42,7 @@
           <ul>
             <li><strong>姓名：</strong>Yinao</li>
             <li><strong>方向：</strong>Full Stack / AI</li>
-            <li><strong>状态：</strong>开放合作</li>
+            <li><strong>状态：</strong>AI</li>
             <li><strong>地点：</strong>China</li>
           </ul>
         </div>
@@ -57,8 +53,7 @@
       <div class="container">
         <h2>关于我</h2>
         <p class="muted">
-          我擅长将想法快速落地成可用产品，重视工程质量、可维护性和用户体验。
-          平时关注大模型应用、后端服务设计与前端交互优化。
+          我是华东师范大学计算机科学与技术学生，擅长AIrouter工程 正在学习前端数据可视化 这是我的个人网页
         </p>
       </div>
     </section>
@@ -67,32 +62,35 @@
       <div class="container">
         <h2>精选项目</h2>
         <div class="card-grid">
-          <article class="card">
-            <h3>AI Chat Backend</h3>
-            <p>基于 Node.js 的聊天后端 API，支持多模型配置与健康检查。</p>
-            <a href="#" aria-label="项目详情">查看详情</a>
-          </article>
-          <article class="card">
-            <h3>Personal Dashboard</h3>
-            <p>聚合任务、笔记与进度追踪，提供简洁高效的个人工作台。</p>
-            <a href="#" aria-label="项目详情">查看详情</a>
-          </article>
-          <article class="card">
-            <h3>Prompt Toolkit</h3>
-            <p>常用提示词管理与模板复用工具，提升 AI 工作流效率。</p>
-            <a href="#" aria-label="项目详情">查看详情</a>
+          <article class="card empty-card">
+            <h3>暂无项目</h3>
+            <p>精选项目初始化为空，你可以后续自行添加。</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="skills" class="section">
+    <section id="papers" class="section">
       <div class="container">
-        <h2>技能栈</h2>
-        <div class="tags">
-          <span>JavaScript</span><span>TypeScript</span><span>Node.js</span><span>Express</span>
-          <span>React</span><span>Python</span><span>SQL</span><span>Docker</span>
-          <span>GitHub Actions</span><span>LLM API</span>
+        <h2>AIrouter相关论文</h2>
+        <p class="muted">
+          长期展示区会自动读取 GitHub 仓库中的 <code>papers/</code> 目录。
+          你把论文文件上传到仓库后，这里会自动显示并可直接打开。
+        </p>
+        <div class="paper-box">
+          <h3>长期保存论文（GitHub）</h3>
+          <p class="muted">仓库：<code>yinao-hub/yinao.github.io</code>，目录：<code>papers/</code></p>
+          <button id="refreshPapersBtn" class="btn ghost" type="button">刷新论文列表</button>
+          <ul id="repoPaperList" class="paper-list"></ul>
+          <p id="repoPaperMsg" class="form-msg"></p>
+        </div>
+
+        <div class="paper-box">
+          <h3>本地临时预览（不会长期保存）</h3>
+          <label class="upload-label" for="paperInput">上传本地论文</label>
+          <input id="paperInput" type="file" accept=".pdf,.txt,.md,.doc,.docx" multiple />
+          <ul id="paperList" class="paper-list"></ul>
+          <p id="paperMsg" class="form-msg"></p>
         </div>
       </div>
     </section>
@@ -101,17 +99,9 @@
       <div class="container">
         <h2>经历时间线</h2>
         <div class="timeline">
-          <div class="timeline-item">
-            <h3>2026 - 现在</h3>
-            <p>专注于 AI 应用落地与工程化实践。</p>
-          </div>
-          <div class="timeline-item">
-            <h3>2024 - 2026</h3>
-            <p>构建多个 Web 产品原型并持续迭代上线。</p>
-          </div>
-          <div class="timeline-item">
-            <h3>2022 - 2024</h3>
-            <p>系统学习前后端开发与数据结构算法。</p>
+          <div class="timeline-item empty-card">
+            <h3>暂无经历</h3>
+            <p>经历时间线初始化为空，你可以后续自行添加。</p>
           </div>
         </div>
       </div>

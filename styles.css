@@ -135,7 +135,7 @@ h1 {
   color: var(--text);
 }
 
-.hero-card, .card, .timeline-item, .contact-form {
+.hero-card, .card, .timeline-item, .contact-form, .paper-box {
   background: var(--card);
   border: 1px solid var(--line);
   border-radius: 16px;
@@ -172,18 +172,83 @@ h2 {
   text-decoration: none;
 }
 
-.tags {
-  display: flex;
-  flex-wrap: wrap;
+.empty-card {
+  width: 100%;
+  border-style: dashed;
+}
+
+.paper-box {
+  max-width: 760px;
+  margin-bottom: 14px;
+}
+
+.paper-box h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.upload-label {
+  display: inline-block;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+#paperInput {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 10px;
+  background: transparent;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+.paper-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
   gap: 10px;
 }
 
-.tags span {
+.paper-item,
+.paper-empty {
   border: 1px solid var(--line);
-  background: var(--card);
-  padding: 8px 12px;
-  border-radius: 999px;
-  font-size: 0.92rem;
+  border-radius: 12px;
+  padding: 10px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.paper-empty {
+  color: var(--muted);
+}
+
+.paper-info {
+  display: grid;
+  gap: 2px;
+}
+
+.paper-info a {
+  color: var(--primary);
+  text-decoration: none;
+  word-break: break-all;
+}
+
+.paper-info span {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.remove-btn {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+  padding: 6px 10px;
 }
 
 .timeline {
