@@ -143,6 +143,9 @@ async function loadRepoPapers() {
   try {
     const response = await fetch(GITHUB_PAPERS_API);
     if (!response.ok) {
+      if (response.status === 404) {
+        throw new Error("读取失败：HTTP 404（通常是仓库中还没有 papers/ 目录或目录为空）");
+      }
       throw new Error(`读取失败：HTTP ${response.status}`);
     }
 
@@ -173,7 +176,7 @@ async function loadRepoPapers() {
   } catch (error) {
     const empty = document.createElement("li");
     empty.className = "paper-empty";
-    empty.textContent = "加载失败，请检查仓库名、分支或网络。";
+    empty.textContent = "加载失败，请检查仓库名、分支、网络，或先在仓库创建 papers/ 目录并上传论文。";
     repoPaperList.appendChild(empty);
     repoPaperMsg.textContent = error.message;
   }
