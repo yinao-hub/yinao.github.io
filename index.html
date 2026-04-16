@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Yinao 的个人主页，展示项目、技能、经历与联系方式。" />
+  <title>Yinao | 个人主页</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header" id="top">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top">Yinao</a>
+      <button id="menuBtn" class="menu-btn" aria-label="打开菜单">☰</button>
+      <nav id="mainNav" class="nav">
+        <a href="#about">关于我</a>
+        <a href="#projects">项目</a>
+        <a href="#skills">技能</a>
+        <a href="#timeline">经历</a>
+        <a href="#contact">联系</a>
+        <button id="themeToggle" class="theme-toggle" aria-label="切换主题">🌙</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Hello, I am</p>
+          <h1>Yinao</h1>
+          <p class="hero-text">
+            我是一个热爱构建产品的开发者，专注于 Web、AI 应用和自动化工具。
+            这个页面用于展示我的项目、能力和联系方式。
+          </p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#projects">查看项目</a>
+            <a class="btn ghost" href="#contact">联系我</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <h3>快速信息</h3>
+          <ul>
+            <li><strong>姓名：</strong>Yinao</li>
+            <li><strong>方向：</strong>Full Stack / AI</li>
+            <li><strong>状态：</strong>开放合作</li>
+            <li><strong>地点：</strong>China</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <h2>关于我</h2>
+        <p class="muted">
+          我擅长将想法快速落地成可用产品，重视工程质量、可维护性和用户体验。
+          平时关注大模型应用、后端服务设计与前端交互优化。
+        </p>
+      </div>
+    </section>
+
+    <section id="projects" class="section alt">
+      <div class="container">
+        <h2>精选项目</h2>
+        <div class="card-grid">
+          <article class="card">
+            <h3>AI Chat Backend</h3>
+            <p>基于 Node.js 的聊天后端 API，支持多模型配置与健康检查。</p>
+            <a href="#" aria-label="项目详情">查看详情</a>
+          </article>
+          <article class="card">
+            <h3>Personal Dashboard</h3>
+            <p>聚合任务、笔记与进度追踪，提供简洁高效的个人工作台。</p>
+            <a href="#" aria-label="项目详情">查看详情</a>
+          </article>
+          <article class="card">
+            <h3>Prompt Toolkit</h3>
+            <p>常用提示词管理与模板复用工具，提升 AI 工作流效率。</p>
+            <a href="#" aria-label="项目详情">查看详情</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="container">
+        <h2>技能栈</h2>
+        <div class="tags">
+          <span>JavaScript</span><span>TypeScript</span><span>Node.js</span><span>Express</span>
+          <span>React</span><span>Python</span><span>SQL</span><span>Docker</span>
+          <span>GitHub Actions</span><span>LLM API</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="timeline" class="section alt">
+      <div class="container">
+        <h2>经历时间线</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <h3>2026 - 现在</h3>
+            <p>专注于 AI 应用落地与工程化实践。</p>
+          </div>
+          <div class="timeline-item">
+            <h3>2024 - 2026</h3>
+            <p>构建多个 Web 产品原型并持续迭代上线。</p>
+          </div>
+          <div class="timeline-item">
+            <h3>2022 - 2024</h3>
+            <p>系统学习前后端开发与数据结构算法。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <h2>联系我</h2>
+        <p class="muted">你可以通过表单留言，或直接发邮件给我。</p>
+        <form id="contactForm" class="contact-form">
+          <label>
+            你的名字
+            <input type="text" name="name" required />
+          </label>
+          <label>
+            邮箱
+            <input type="email" name="email" required />
+          </label>
+          <label>
+            内容
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+          <button class="btn primary" type="submit">发送留言</button>
+          <p id="formMsg" class="form-msg" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p>© <span id="year"></span> Yinao. All rights reserved.</p>
+      <a href="#top" class="back-top">回到顶部 ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
